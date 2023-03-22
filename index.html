@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <title>Image Filtering App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="pictureBox">
+        <div class="pic"><img class="picImg" src="image.jpg"></div>
+        <div class="buttons">
+          <input type="file" name="file" id="file" accept=".jpg,.png,.jpeg">
+          <label for="file">Upload File &nbsp<i class="fas fa-upload"></i></label>
+          <button id="download">Download &nbsp<i class="fas fa-download"></i></button>
+        </div>
+      </div>
+
+      <div class="settingsBox">
+        <div class="box">
+          <span>Contrast</span>
+          <div class="range">
+            <div class="ballon">
+              <span>0</span>
+            </div>
+            <input type="range" min="0" max="1000" value="100" class="rangeSlider" id="contrast">
+          </div>
+        </div>
+
+        <div class="box">
+          <span>Brightness</span>
+          <div class="range">
+            <div class="ballon">
+              <span>0</span>
+            </div>
+            <input type="range" min="0" max="200" value="100" class="rangeSlider" id="brightness">
+          </div>
+        </div>
+
+        <div class="box">
+          <span>Invert</span>
+          <div class="range">
+            <div class="ballon">
+              <span>0</span>
+            </div>
+            <input type="range" min="0" max="100" value="0" class="rangeSlider" id="invert">
+          </div>
+        </div>
+
+        <div class="box">
+          <span>Hue-rotate</span>
+          <div class="range">
+            <div class="ballon">
+              <span>0</span>
+            </div>
+            <input type="range" min="0" max="360" value="0" class="rangeSlider" id="hue-rotate">
+          </div>
+        </div>
+
+        <div class="box">
+          <span>Saturate</span>
+          <div class="range">
+            <div class="ballon">
+              <span>0</span>
+            </div>
+            <input type="range" min="0" max="1000" value="100" class="rangeSlider" id="saturate">
+          </div>
+        </div>
+
+        <div class="box">
+          <span>Sepia</span>
+          <div class="range">
+            <div class="ballon">
+              <span>0</span>
+            </div>
+            <input type="range" min="0" max="100" value="0" class="rangeSlider" id="sepia">
+          </div>
+        </div>
+
+        <div class="box">
+          <span>Grayscale</span>
+          <div class="range">
+            <div class="ballon">
+              <span>0</span>
+            </div>
+            <input type="range" min="0" max="100" value="0" class="rangeSlider" id="grayscale">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <canvas id="canvas"></canvas>
+
+
+    <script src="script.js"></script>
+  </body>
+</html>
